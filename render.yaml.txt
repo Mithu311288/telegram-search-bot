@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: telegram-search-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python search_bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7643830745:AAGNIaU2KmlMRRvnUcBdbW1Usi90kRVsjOw
+      - key: GOOGLE_SHEET_NAME
+        value: Digital Shop Advance
